@@ -107,12 +107,12 @@ tensorboardX==2.6.2.2
 
 
 
-* **Quantitative comparison with state-of-the-art methods on BUSI (malignant) dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. **
+* **Quantitative comparison with state-of-the-art methods on BUSI (malignant) dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.**
 <div align="center">
   <img src="./figures/BUSI (malignant)_tab.png" height="200" width="800">
 </div>
 
-* ***Visual comparison of segmentation results for malignant tumor segmentation on BUSI dataset ***
+* ***Visual comparison of segmentation results for malignant tumor segmentation on BUSI dataset***
 <div align="center">
   <img src="./figures/malignant对比方法.bmp" height="400" width="1000">
 </div>
@@ -135,12 +135,12 @@ tensorboardX==2.6.2.2
   <img src="./figures/ACDC_tab.png" height="200" width="800">
 </div>
 
-* ***Quantitative comparison with state-of-the-art methods on Synapse dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. ***
+* ***Quantitative comparison with state-of-the-art methods on Synapse dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.***
 <div align="center">
   <img src="./figures/Synpase_tab.png" height="200" width="800">
 </div>
 
-* **Visual comparison between AFDSeg and state-of-the-art methods for multi-class segmentation tasks on ACDC [36] and Synapse datasets[39] (Left: Cardiac Segmentation; Right: Abdominal multi-organ Segmentation) **
+* **Visual comparison between AFDSeg and state-of-the-art methods for multi-class segmentation tasks on ACDC [36] and Synapse datasets[39] (Left: Cardiac Segmentation; Right: Abdominal multi-organ Segmentation)**
 <div align="center">
   <img src="./figures/SynpaseandACDC.jpg" height="1200" width="1000">
 </div>
@@ -153,12 +153,13 @@ tensorboardX==2.6.2.2
 <p>
 Visualization of the quantitative comparison results between AFDSeg and state-of-the-art methods across four datasets
 </p>
+
 **-----------------------------------------------------------------------------------------------------------------------------------------------------------**
 
 ## Cross-domain segmentation for generalization performance analysis
 
 ### Kvasir-SEG → Kvasir Capsule-SEG
-* **Cross-domain quantitative analysis (training on Kvasir-SEG Dataset, model generalizability testing on Kvasir Capsule-SEG dataset[45]). The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. **
+* **Cross-domain quantitative analysis (training on Kvasir-SEG Dataset, model generalizability testing on Kvasir Capsule-SEG dataset[45]). The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.**
 <div align="center">
   <img src="./figures/Kvasir Capsule-SEG dataset_tab.png" height="200" width="1000">
 </div>
@@ -173,13 +174,13 @@ Visualization of the quantitative comparison results between AFDSeg and state-of
 
 
 ### BUSI → BUS42
-* **Cross-domain quantitative analysis (training on BUSI Dataset, model generalizability testing on BUS42 dataset [46]). The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.  **
+* **Cross-domain quantitative analysis (training on BUSI Dataset, model generalizability testing on BUS42 dataset [46]). The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.**
 <div align="center">
   <img src="./figures/BUS42.png" height="200" width="1000">
 </div>
 
 
-* **Cross-domain quantitative analysis (training on Kvasir-SEG Dataset, model generalizability testing on Kvasir Capsule-SEG dataset[45]). The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. **
+* **Cross-domain quantitative analysis (training on Kvasir-SEG Dataset, model generalizability testing on Kvasir Capsule-SEG dataset[45]). The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.**
 <div align="center">
   <img src="./figures/cross-domainBUSI3.bmp" height="200" width="1000">
 </div>
@@ -203,9 +204,10 @@ Visualization of the quantitative comparison results between AFDSeg and state-of
 <div align="center">
   <img src="./figures/ablation_module.png" height="200" width="800">
 </div>
-* ***TVisual comparison between AFDSeg and state-of-the-art methods for crossdomain segmentation ACDC → M&Ms. Left: Entropy map [44] shows a better certainty
+
+* **TVisual comparison between AFDSeg and state-of-the-art methods for crossdomain segmentation ACDC → M&Ms. Left: Entropy map [44] shows a better certainty
 for the predictions of our AFDseg. Right: T-SNE [45] shows a better category separability
-for our AFDseg***
+for our AFDseg**
 <div align="center">
   <img src="./figures/ablation_module_vis.bmp" height="1200" width="850">
 </div>
@@ -258,7 +260,7 @@ Size)***
 </div>
 
 
-* ***Visualize the feature response after FAHS using Grad-CAM ***
+* ***Visualize the feature response after FAHS using Grad-CAM***
 <div align="center">
   <img src="./figures/ablation_windows.bmp" height="1200" width="1000">
 </div>
@@ -272,6 +274,8 @@ Size)***
 <p>
 Visualize the bubble plots of FLOPs and mDice composite metrics for each dataset
 </p>
+
+
 ## Test
 * **Check out eval.sh for test file configuration**
   * ***Mask visualization***
@@ -281,6 +285,8 @@ Visualize the bubble plots of FLOPs and mDice composite metrics for each dataset
 
 ## License
  The code is released under the MIT license[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT).
+
+
 
 ## Relevant Projects
 ***[1] Semantic distribution-aware contrastive adaptation for semantic segmentation  - IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE*** [**[arXiv](https://arxiv.org/abs/2105.05013) [code](https://github.com/BIT-DA/SDCA)**]
