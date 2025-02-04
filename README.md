@@ -16,7 +16,9 @@
     <img src="https://img.shields.io/badge/Docker-%23007FFF?style=flat&logo=docker&logoColor=white&labelColor=%23007FFF" alt="Docker">
   </a>
 </div>
-**This repository contains the official Pytorch implementation of training & evaluation code for** :eye:  [[AFDSeg](github.com/promisedong/AFDSeg)]
+
+
+***This repository contains the official Pytorch implementation of training & evaluation code for [[AFDSeg](https://github.com/promisedong/AFDSeg)]*** :eye:
 
 
 ## Introduction
@@ -140,7 +142,7 @@ tensorboardX==2.6.2.2
 
 * **Visual comparison between AFDSeg and state-of-the-art methods for multi-class segmentation tasks on ACDC [36] and Synapse datasets[39] (Left: Cardiac Segmentation; Right: Abdominal multi-organ Segmentation) **
 <div align="center">
-  <img src="./figures/SynpaseandACDC.bmp" height="1200" width="1000">
+  <img src="./figures/SynpaseandACDC.jpg" height="1200" width="1000">
 </div>
 
 
