@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/Docker-%23007FFF?style=flat&logo=docker&logoColor=white&labelColor=%23007FFF" alt="Docker">
   </a>
 </div>
-**This repository contains the official Pytorch implementation of training & evaluation code for** :eye:  [[AFDSeg](github.com/promisedong/AFDSeg)]
+** This repository contains the official Pytorch implementation of training & evaluation code for ** :eye:  [[AFDSeg](github.com/promisedong/AFDSeg)]
 
 
 ## Introduction
@@ -53,7 +53,7 @@ heterogeneous network framework supporting multiple network architectures for me
 
 ### Environment Installation
 ```
-conda create -n PTDA python=3.9.13
+conda create -n AFDSeg python=3.9.13
 conda activate AFDSeg
 conda install pytorch torchvision torchaudio cudatoolkit -c pytorch
 
@@ -140,7 +140,7 @@ tensorboardX==2.6.2.2
 
 * **Visual comparison between AFDSeg and state-of-the-art methods for multi-class segmentation tasks on ACDC [36] and Synapse datasets[39] (Left: Cardiac Segmentation; Right: Abdominal multi-organ Segmentation) **
 <div align="center">
-  <img src="./figures/Synpase和ACDC对比方法-联排.bmp" height="1200" width="1000">
+  <img src="./figures/SynpaseandACDC.bmp" height="1200" width="1000">
 </div>
 
 
