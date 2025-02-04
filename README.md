@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/Docker-%23007FFF?style=flat&logo=docker&logoColor=white&labelColor=%23007FFF" alt="Docker">
   </a>
 </div>
-** This repository contains the official Pytorch implementation of training & evaluation code for ** :eye:  [[AFDSeg](github.com/promisedong/AFDSeg)]
+**This repository contains the official Pytorch implementation of training & evaluation code for** :eye:  [[AFDSeg](github.com/promisedong/AFDSeg)]
 
 
 ## Introduction
@@ -45,7 +45,7 @@ through continuous convolution operations, effectively denoising local high-freq
 
 ## Abstract:
 **Accurate medical image segmentation requires precise localization of global structures and local boundaries due to the high variability in lesion shape and size.  However, existing models are limited by conventional spatio temporal features and single-network architectures, making it difficult to capture both semantic information and boundary details, posing a challenge for generalizable medical image segmentation. To address this, we propose a heterogeneous network-driven adaptive frequency-domain enhanced deep model (AFDSeg). First, we introduce the Frequency Domain Adaptive High-Frequency Feature Selection (FAHS) module, which adaptively extracts high-frequency features to enhance contour and detail representation while integrating spatiotemporal and frequency-domain features to improve consistency. Next, we design the Prototype-Guided Low-Frequency Feature Aware (PLFA) and Local High-Frequency Salient-Feature Denoising (LHSD) modules, which extract discriminative low-frequency features and suppress local noise in high-frequency components, ensuring efficient multi-scale feature fusion. We also introduce the Multi-Level Prototype Feature Refinement (MPFR) module to align low- and high-dimensional features during decoding and enhance semantic consistency. Finally, we propose a
-heterogeneous network framework supporting multiple network architectures for medical image segmentation. Our method achieves mDice scores of 93.91%, 88.64%, 90.70%, and 81.38% on the Kvasir-SEG, BUSI, ACDC, and Synapse datasets, respectively, and attains 92.09%, 93.50%, and 83.92% in cross-domain experiments on three unseen datasets (Kvasir Capsule-SEG, BUS42, and M&Ms). Our approach consistently outperforms state-of-the-art methods across both benchmark and cross-domain datasets. Extensive quantitative and qualitative experiments demonstrate its ability to accurately segment global structures and local details while maintaining superior generalization, highlighting its clinical significance. The Code is available at [AFDSeg](https://github.com/promisedong/AFDSeg). **
+heterogeneous network framework supporting multiple network architectures for medical image segmentation. Our method achieves mDice scores of 93.91%, 88.64%, 90.70%, and 81.38% on the Kvasir-SEG, BUSI, ACDC, and Synapse datasets, respectively, and attains 92.09%, 93.50%, and 83.92% in cross-domain experiments on three unseen datasets (Kvasir Capsule-SEG, BUS42, and M&Ms). Our approach consistently outperforms state-of-the-art methods across both benchmark and cross-domain datasets. Extensive quantitative and qualitative experiments demonstrate its ability to accurately segment global structures and local details while maintaining superior generalization, highlighting its clinical significance. The Code is available at [AFDSeg](https://github.com/promisedong/AFDSeg).**
 
 
 ## Installation
