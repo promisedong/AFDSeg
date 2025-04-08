@@ -1,4 +1,4 @@
-# :tada: AFDSeg: Adaptive Frequency-Domain Enhanced Deep Model Driven by Heterogeneous Networks for Medical Image Segmentation
+# :tada: Adaptive Frequency-Domain Enhanced Deep Model Driven by Heterogeneous Networks for Medical Image Segmentation
 <div align=center>
   <a href="https://github.com/miguelag99/Efficient-Instance-Prediction/blob/main/CHANGELOG.md">
     <img src="https://img.shields.io/badge/Changelog-v1.1.2-2ea44f" alt="CHANGELOG">
