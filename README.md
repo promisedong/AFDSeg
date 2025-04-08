@@ -99,7 +99,13 @@ tensorboardX==2.6.2.2
 </div>
 
 
-
+*  ***Visual comparison of segmentation results on Kvasir-SEG dataset***
+<div align="center">
+  <img src="./figures/kvasir-seg对比方法0.bmp" height="350" width="1000">
+</div>
+<p align="center">
+  Visual comparison of segmentation results on Kvasir-SEG dataset
+</p>
 
 
 ### Result on the BUSI Dataset
@@ -109,7 +115,7 @@ tensorboardX==2.6.2.2
 </div>
 
 
-* ***Visual comparison of segmentation results for binary segmentation on BUSI and  Kvasir-SEG datasets ***
+* ***Visual comparison of segmentation results for binary segmentation on BUSI dataset ***
 <div align="center">
   <img src="./figures/binary.bmp" height="400" width="1000">
 </div>
@@ -190,14 +196,14 @@ Visualization of the quantitative comparison results between AFDSeg and state-of
 ### Ablation study for proposed modules
 * ***The ablation study of each module on the ACDC dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. ***
 <div align="center">
-  <img src="./figures/ablation_module.png" height="200" width="800">
+  <img src="./figures/ablation_network.png" height="200" width="800">
 </div>
 
 * **TVisual comparison between AFDSeg and state-of-the-art methods for cross-domain segmentation ACDC → M&Ms. Left: Entropy map [44] shows a better certainty
 for the predictions of our AFDseg. Right: T-SNE [45] shows a better category separability
 for our AFDseg**
 <div align="center">
-  <img src="./figures/ablation_module_vis.bmp" height="1200" width="850">
+  <img src="./figures/ablation_network.bmp" height="1200" width="850">
 </div>
 
 
@@ -208,14 +214,14 @@ for our AFDseg**
 optimal results are marked with black bold, and the suboptimal results are marked with
 an underline “–”.***
 <div align="center">
-  <img src="./figures/ablation_network.png" height="100" width="800">
+  <img src="./figures/ablation_network_tab.png" height="100" width="800">
 </div>
 
 
 * ***Visualize the recognition accuracy of different heterogeneous networks on medical image features (red circles indicate regions with stronger feature coupling, where other
 models fail to perform fine-grained segmentation)***
 <div align="center">
-  <img src="./figures/ablation_network.bmp" height="600" width="1000">
+  <img src="./figures/ablation_network_vis.bmp" height="600" width="1000">
 </div>
 
 
@@ -239,8 +245,8 @@ models fail to perform fine-grained segmentation)***
 </div>
 
 
-### Ablation study for filter window size of the FASM module
-* ***The ablation study for the size of the filtering window of FASM module on the
+### Ablation study for filter window size of the FAHS module
+* ***The ablation study for the size of the filtering window of FAHS module on the
 ACDC dataset. The optimal results are marked with black bold. (Size: Filter Window
 Size)***
 <div align="center">
