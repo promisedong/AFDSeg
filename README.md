@@ -24,7 +24,7 @@
 ## Introduction
 ### Segmentation performance of various model architectures on the Synapse dataset. Most previous methods rely on a single network architecture and overlook adaptive joint spatiotemporal and frequency-domain feature extraction for the progressive coupling of normal tissues and lesions (organs) in medical images. We revisit the role of the frequency domain in feature extraction and introduce AFDSeg, which outperforms previous state-of-the-art methods in segmentation performance.
 <div align="center">
-  <img src="./figures/Introduction.bmp" height="350" width="600">
+  <img src="./figures/Introduction.png" height="350" width="600">
 </div>
 <p align="center">
  Figure 1: Segmentation performance of various model architectures on the Synapse dataset. Most previous methods rely on a single network architecture and overlook adaptive joint spatiotemporal and frequency-domain feature extraction for the progressive coupling of normal tissues and lesions (organs) in medical images. We revisit the role of the frequency domain in feature extraction and introduce AFDSeg, which outperforms previous state-of-the-art methods in segmentation performance.
@@ -37,17 +37,30 @@
   <img src="./figures/overframe.png" height="800" width="1000">
 </div>
 <p align="center">
-  Figure 2: Overview of the proposed AFDSeg. The FAHS adaptively extracts high frequency textures and detailed features from the frequency domain of images. The PLFA
-leverages prototype features to enhance the perception of low-frequency components by
-emphasizing high-frequency features. The LHSD refines significant high-frequency features
-through continuous convolution operations, effectively denoising local high-frequency details. In the decoding stage, The MPFR utilizes prototype features to facilitate the alignment of multi-scale features. (The blue box denotes the encoding stage, while the orange box indicates the decoding stage.)
+  Figure 2: (a) Overall architecture of the proposed AFDSeg; (b) The LHSD and FAHS
+modules correspond to the denoising branch and the frequency domain branch, respectively, while the PLFA module transforms the frequency domain into the spatial domain,
+representing the spatial domain branch. This process involves feature interaction and feature aggregation; (c-d) Prototype-Guided Low-Frequency Feature Aware (PLFA) module
+and CBA module; (e) Building Blocks of the Transformer Network.
 </p>
 
 
 
 ## Abstract:
-**Accurate medical image segmentation requires precise localization of global structures and local boundaries due to the high variability in lesion shape and size.  However, existing models are limited by conventional spatio temporal features and single-network architectures, making it difficult to capture both semantic information and boundary details, posing a challenge for generalizable medical image segmentation. To address this, we propose a heterogeneous network-driven adaptive frequency-domain enhanced deep model (AFDSeg). First, we introduce the Frequency Domain Adaptive High-Frequency Feature Selection (FAHS) module, which adaptively extracts high-frequency features to enhance contour and detail representation while integrating spatiotemporal and frequency-domain features to improve consistency. Next, we design the Prototype-Guided Low-Frequency Feature Aware (PLFA) and Local High-Frequency Salient-Feature Denoising (LHSD) modules, which extract discriminative low-frequency features and suppress local noise in high-frequency components, ensuring efficient multi-scale feature fusion. We also introduce the Multi-Level Prototype Feature Refinement (MPFR) module to align low- and high-dimensional features during decoding and enhance semantic consistency. Finally, we propose a
-heterogeneous network framework supporting multiple network architectures for medical image segmentation. Our method achieves mDice scores of 93.91%, 88.64%, 90.70%, and 81.38% on the Kvasir-SEG, BUSI, ACDC, and Synapse datasets, respectively, and attains 92.09%, 93.50%, and 83.92% in cross-domain experiments on three unseen datasets (Kvasir Capsule-SEG, BUS42, and M&Ms). Our approach consistently outperforms state-of-the-art methods across both benchmark and cross-domain datasets. Extensive quantitative and qualitative experiments demonstrate its ability to accurately segment global structures and local details while maintaining superior generalization, highlighting its clinical significance. The Code is available at [AFDSeg](https://github.com/promisedong/AFDSeg).**
+**Accurate medical image segmentation necessitates precise localization of global
+structures and local boundaries due to the high variability in lesion shapes
+and sizes. However, existing models are limited by conventional spatiotemporal features and single-network architectures, which restrict the simultaneous captures of semantic information and boundary details, thereby
+challenging generalizable medical image segmentation. To overcome these
+limitations, we propose a heterogeneous network-driven adaptive frequencydomain enhanced deep model(AFDSeg). First, we introduce the Frequency
+Domain Adaptive High-Frequency Feature Selection(FAHS) module, which
+adaptively extracts high-frequency features to enhance contour and detail
+representation while integrating spatiotemporal and frequency-domain features for improved consistency. Additionally, Prototype-Guided Low-Frequency
+Feature Aware(PFLA) and Local High-Frequency Salient-Feature Denoising
+(LHSD) modules are developed,  which extract discriminative low-frequency features while suppressing local noise in high-frequency components, thereby
+facilitating efficient multi-scale feature fusion. Furthermore, the Multi-Level
+Prototype Feature Refinement(MPFR) Module is introduced to align low and high-dimensional features during decoding and enhance semantic consistency. Finally, a heterogeneous network framework capable of accommodating multiple network architecture for medical image segmentation is proposed. Our method achieves mDice scores of 93.91%, 88.64%, 90.70%,
+91.27%, and 81.38% on the Kvasir-SEG, BUSI, ISIC-2017, ACDC, and Synapse
+datasets, respectively, and attains 92.09%, 93.50%, and 83.92% in cross-domain experiments on three unseen datasets (Kvasir Capsule-SEG, BUS42,
+and M&Ms). Our approach consistently outperforms state-of-the-art methods on both benchmark and cross-domain datasets. Extensive quantitative and qualitative experiments demonstrated that AFDSeg accurately segments global structures and local details while maintaining superior generalization, underscoring its clinical significance. The Code is available at [AFDSeg](https://github.com/promisedong/AFDSeg).**
 
 
 ## Installation
@@ -69,10 +82,12 @@ tensorboardX==2.6.2.2
 - **ACDC:** https://acdc.creatis.insa-lyon.fr/description/databases.html
 - **BUSI:** https://scholar.cu.edu.eg/?q=afahmy/pages/dataset
 - **Kvasir-SEG:** https://datasets.simula.no/kvasir-seg/
+- **ISIC 2017:** https://challenge.isic-archive.com/data/#2017
 - **Synapse:** https://www.synapse.org/Synapse:syn3193805/wiki/217789
 - **BUI42:** https://github.com/xbhlk/STU-Hospital.git
 - **Kvasir Capsule-SEG:** https://datasets.simula.no/kvasir-capsule-seg/
 - **M&Ms dataset:** https://www.ub.edu/mnms/
+
 
 
 
@@ -84,49 +99,22 @@ tensorboardX==2.6.2.2
 </div>
 
 
-*  ***Visual comparison of segmentation results on Kvasir-SEG dataset***
-<div align="center">
-  <img src="./figures/kvasir-seg对比方法0.bmp" height="350" width="1000">
-</div>
-<p align="center">
-  Visual comparison of segmentation results on Kvasir-SEG dataset
-</p>
+
 
 
 ### Result on the BUSI Dataset
-* ***Quantitative comparison with state-of-the-art methods on BUSI (benign) dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. ***
+* ***Quantitative comparison with state-of-the-art methods on BUSI dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. ***
 <div align="center">
-  <img src="./figures/BUSI (benign) dataset_tab.png" height="200" width="800">
+  <img src="./figures/BUSI_tab.png" height="200" width="800">
 </div>
 
 
-* ***Visual comparison of segmentation results for benign tumor segmentation on BUSI dataset ***
+* ***Visual comparison of segmentation results for binary segmentation on BUSI and  Kvasir-SEG datasets ***
 <div align="center">
-  <img src="./figures/benign对比方法.bmp" height="400" width="1000">
+  <img src="./figures/binary.bmp" height="400" width="1000">
 </div>
 
 
-
-* **Quantitative comparison with state-of-the-art methods on BUSI (malignant) dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’.**
-<div align="center">
-  <img src="./figures/BUSI (malignant)_tab.png" height="200" width="800">
-</div>
-
-* ***Visual comparison of segmentation results for malignant tumor segmentation on BUSI dataset***
-<div align="center">
-  <img src="./figures/malignant对比方法.bmp" height="400" width="1000">
-</div>
-
-
-* **Quantitative comparison with state-of-the-art methods on BUSI (mixed benign-malignant) dataset. The optimal results are marked with black bold, and the suboptimal  results are marked with an underline ‘‘–’’. **
-<div align="center">
-  <img src="./figures/BUSImixdataset_tab.png" height="200" width="800">
-</div>
-
-* ***Visual comparison of segmentation results for tumor segmentation on BUSI dataset ***
-<div align="center">
-  <img src="./figures/BUSI对比方法.bmp" height="350" width="1000">
-</div>
 
 
 ### Result on the ACDC and Synapse Dataset
@@ -146,12 +134,12 @@ tensorboardX==2.6.2.2
 </div>
 
 
-### Visualization of the quantitative comparison results between AFDSeg and state-of-the-art methods across four datasets
+### Visualization of the quantitative comparison results between AFDSeg and state-of-the-art methods across five datasets
 <div align="center">
   <img src="./figures/compare_tab.bmp" height="600" width="1200">
 </div>
 <p>
-Visualization of the quantitative comparison results between AFDSeg and state-of-the-art methods across four datasets
+Visualization of the quantitative comparison results between AFDSeg and state-of-the-art methods across five datasets
 </p>
 
 **-----------------------------------------------------------------------------------------------------------------------------------------------------------**
@@ -165,7 +153,7 @@ Visualization of the quantitative comparison results between AFDSeg and state-of
 </div>
 
 
-* **Visual comparison between AFDSeg and state-of-the-art methods for crossdomain segmentation Kvasir-SEG → Kvasir Capsule-SEG**
+* **Visual comparison between AFDSeg and state-of-the-art methods for cross-domain segmentation Kvasir-SEG → Kvasir Capsule-SEG**
 <div align="center">
   <img src="./figures/cross-domainKvasir-Capsule.bmp" height="200" width="1000">
 </div>
@@ -205,7 +193,7 @@ Visualization of the quantitative comparison results between AFDSeg and state-of
   <img src="./figures/ablation_module.png" height="200" width="800">
 </div>
 
-* **TVisual comparison between AFDSeg and state-of-the-art methods for crossdomain segmentation ACDC → M&Ms. Left: Entropy map [44] shows a better certainty
+* **TVisual comparison between AFDSeg and state-of-the-art methods for cross-domain segmentation ACDC → M&Ms. Left: Entropy map [44] shows a better certainty
 for the predictions of our AFDseg. Right: T-SNE [45] shows a better category separability
 for our AFDseg**
 <div align="center">
@@ -224,7 +212,7 @@ an underline “–”.***
 </div>
 
 
-* ***Visualize the recognition accuracy of different heterogeneous networks on medical image features (red circles indicate regions with stronger feature coupling, where other
+* ***Visualize the recognition accuracy of different heterogeneous networks on medical image features (red circles indicate regions with stronger feature coupling, where other
 models fail to perform fine-grained segmentation)***
 <div align="center">
   <img src="./figures/ablation_network.bmp" height="600" width="1000">
